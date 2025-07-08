@@ -19,91 +19,119 @@ large corporate clients (wholesale) across Lagos, Nigeria.
 	- For Data Cleaning
    	- For Data Wrangling
    	- For Data Manipulation
-- SQL Server (SSMS)  [Download here](https://www.microsoft.com/sql-server/sql-server-downloads)
+- SQL Server (SSMS) [Download here](https://www.microsoft.com/sql-server/sql-server-downloads)
 	- For Querying
    	- For Analysis
 
+#### EXPLORATORY DATA ANALYSIS
+The data presented is clean and so did not need to be cleaned
 
-### ANALYSIS
+EDA involved the exploring of the Data to answer the following questions1:
+1. The product category with the highest sales 
+2. The Top 3 and Bottom 3 regions in terms of sales 
+3. The total sales of appliances in Ontario?
+
+#### DATA ANALYSIS
 [SQL Project 2.txt](https://github.com/user-attachments/files/21130766/SQL.Project.2.txt)
 
+PRODUCT CATEGORY WITH THE HIGHEST SALES
+``` SQL
 Select * from KMS
 
--------Product Category With Highest Sales----------
 Select top 1 * from (
 		Select Product_Category, Sales, Region
 				from KMS) AS Highest_Sales
 Order by Sales desc
+```
 
-
---------Top 3 Sales Region------
+TOP 3 SALES REGION
+``` SQL
 Select top 3 * from (
 		Select Product_Category,Product_Sub_Category, Sales, Order_Quantity, Region
 				from KMS) AS Top_Sales_Region
 Order by Sales desc
+```
 
-
-------Bottom 3 Sales Region-------
+BOTTOM 3 SALES REGION
+```SQL
 Select top 3 * from (
 		Select Product_Category,Product_Sub_Category, Sales, Order_Quantity, Region
 				from KMS) AS Bottom_Sales_Region
 Order by Sales asc
+```
 
-Select * from KMS
-
-
---------Total Sales of Appliances in Ontario--------
+TOTAL SALES OF APPLIANCES IN ONTARIO
+```SQL
 Select  Sum(Sales) AS TotalSales, Count(distinct Order_Quantity) as Purchase_Amount, Product_Sub_Category
 	from KMS
 	where Region = 'Ontario' And Product_sub_Category = 'Appliances'
 Group by Product_Sub_Category 
+```
 
-
-
-------Increase Revenue By Bottom 10 Customers------
+BOTTOM 10 CUSTOMER
+``` SQL
 Select top 10 
 		 Customer_Name, count(distinct Order_ID) as Order_Shipment, Sum(Sales) as Total_Purchase
 				from KMS
 Group by Customer_Name
-Order by Sum(Sales) asc ------KMS should understand the specific needs of these customers and provide them--------
+Order by Sum(Sales) asc
+```
 
-Select * from KMS
-
-
-
-------The Highest Shipping Cost-------
+HIGHEST SHIPPING COST
+```SQL
 Select top 3
 	Ship_Mode, count(distinct Order_ID) as Order_Shipment, Sum(Shipping_Cost) as Total_Cost
 from KMS
-Group by Ship_Mode -------KMS incurred the most shipping cost through EXPRESS AIR--------
+Group by Ship_Mode
+```
 
-
-
--------Most Valuable Customers----------
+5 MOST VALUABLE CUSTOMER
+``` SQL
 Select top 5
 	Customer_Name, count(distinct Order_ID) as No_of_Purchase, Sum(Sales) as Total_Purchase
 From KMS
 Group by Customer_Name
 Order by Total_Purchase Desc
 
--------Products Most Valuable Customers Purchase------
+```
+
+PRODUCTS MOST VALUABLE CUSTOMERS PURCHASE
+``` SQL
 Select top 5
 	  count(distinct Order_ID) as No_of_Purchase, Sum(Sales) as Total_Purchase, Product_Sub_Category
 From KMS
 Group by Product_Sub_Category
 Order by Total_Purchase Desc
+```
 
-
-
---------Highest Sales by Small Biz Customer-----
+HIGHEST SALES BY SMALL BUSINESS
+``` SQL
 Select top 1
 		Customer_Name, Sum(Sales) as Total_Sales
 From KMS
 	Where Customer_Segment = 'Small Business'
 Group by Customer_Name
 Order by Total_Sales desc
+```
 
 Select * from KMS
+------KMS should understand the specific needs of these customers and provide them--------
+
+Select * from KMS
+
+
+
+ -------KMS incurred the most shipping cost through EXPRESS AIR--------
+
+
+
+
+
+
+
+
+
+
 
 
 
