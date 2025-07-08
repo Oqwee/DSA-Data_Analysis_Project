@@ -1,4 +1,4 @@
-# DSA-Data_Analysis_Project
+# DSA-Data_Analysis_Project (SQL)
 ### This is my final project on my Data Analysis training with the Incubator Hub
 This project aims to analyze the sales performance of a company's products and to present key insights to the management team, for an informed decision
 ## SCENARIO 1 
