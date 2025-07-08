@@ -1,6 +1,6 @@
 # DSA-Data_Analysis_Project
 ### This is my final project on my Data Analysis training with the Incubator Hub
-This project aims to analyze 2 companies data set and to present key insights to the management team, for an informed decision
+This project aims to analyze a companies data set and to present key insights to the management team, for an informed decision
 ## SCENARIO 1 
 ### KULTRA MEGA STORES INVEVENTORY
 COMPANY OVERVIEW
