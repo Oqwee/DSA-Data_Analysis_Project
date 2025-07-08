@@ -15,12 +15,18 @@ large corporate clients (wholesale) across Lagos, Nigeria.
 
 #### TOOLS USED
 
-SQL SERVER MANAGEMENT STUDIO (SSMS)[]
-For Data Analysis
-MICROSOFT EXCEL (https://www.microsoft.com/en-us/microsoft-365/excel)[Download here]
-For Data wrangling
+- MICROSOFT EXCEL [Download Here](https://www.microsoft.com/en-us/microsoft-365/excel)
+	- For Data Cleaning
+   	- For Data Wrangling
+   	- For Data Manipulation
+- SQL Server (SSMS)  [Download here](https://www.microsoft.com/sql-server/sql-server-downloads)
+	- For Querying
+   	- For Analysis
+
+
 ### ANALYSIS
 [SQL Project 2.txt](https://github.com/user-attachments/files/21130766/SQL.Project.2.txt)
+
 Select * from KMS
 
 -------Product Category With Highest Sales----------
