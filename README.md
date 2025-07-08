@@ -1,6 +1,6 @@
 # DSA-Data_Analysis_Project
 ### This is my final project on my Data Analysis training with the Incubator Hub
-This project aims to analyze a companies data set and to present key insights to the management team, for an informed decision
+This project aims to analyze the sales performance of a company's products and to present key insights to the management team, for an informed decision
 ## SCENARIO 1 
 ### KULTRA MEGA STORES INVEVENTORY
 COMPANY OVERVIEW
@@ -114,26 +114,6 @@ Group by Customer_Name
 Order by Total_Sales desc
 ```
 
-Select * from KMS
-------KMS should understand the specific needs of these customers and provide them--------
-
-Select * from KMS
-
-
-
- -------KMS incurred the most shipping cost through EXPRESS AIR--------
-
-
-
-
-
-
-
-
-
-
-
-
-
--------
-Order by Total_Sales
+OBSERVATION AND RECOMMENDATIONS BASED ON THE RESULT OF ANALYSIS
+1. KMS should understand the specific needs of bottom customers and ensure they are always available
+2. More shipping cost was incurred through Delivery trucks. KMS should spend more shipping cost on Express Air for high priority order, since it is faster.
