@@ -30,6 +30,10 @@ EDA involved the exploring of the Data to answer the following questions1:
 1. The product category with the highest sales 
 2. The Top 3 and Bottom 3 regions in terms of sales 
 3. The total sales of appliances in Ontario?
+4. Bottom 10 customers
+5. Highest shipping cost
+6. 5 Most valuable customers
+7. Small business with highest sales
 
 #### DATA ANALYSIS
 [SQL Project 2.txt](https://github.com/user-attachments/files/21130766/SQL.Project.2.txt)
